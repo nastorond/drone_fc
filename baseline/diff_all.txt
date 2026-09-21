@@ -1,0 +1,142 @@
+# version
+# Betaflight / STM32F405 (S405) 4.2.0 Jun 14 2020 / 03:04:22 (8f2d21460) MSP API: 1.43
+
+# config: YES
+# board: manufacturer_id: VGRC, board_name: VGOODRCF4
+
+# diff all
+
+# version
+# Betaflight / STM32F405 (S405) 4.2.0 Jun 14 2020 / 03:04:22 (8f2d21460) MSP API: 1.43
+
+# config: YES
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name VGOODRCF4
+manufacturer_id VGRC
+mcu_id 001e002f5553501620313156
+signature 
+
+# name: mk01
+
+# feature
+feature -LED_STRIP
+feature -AIRMODE
+feature TELEMETRY
+
+# beeper
+beeper -GYRO_CALIBRATED
+beeper -RX_LOST_LANDING
+beeper -DISARMING
+beeper -ARMING
+beeper -ARMING_GPS_FIX
+beeper -BAT_LOW
+beeper -GPS_STATUS
+beeper -ACC_CALIBRATION
+beeper -READY_BEEP
+beeper -DISARM_REPEAT
+beeper -ARMED
+beeper -SYSTEM_INIT
+beeper -ON_USB
+beeper -CAM_CONNECTION_OPEN
+beeper -CAM_CONNECTION_CLOSE
+beeper -RC_SMOOTHING_INIT_FAIL
+
+# beacon
+beacon RX_LOST
+
+# serial
+serial 1 2048 115200 57600 0 115200
+serial 4 64 115200 57600 0 115200
+serial 5 0 115200 57600 0 115200
+
+# aux
+aux 0 0 0 900 1150 0 0
+aux 1 1 2 900 1300 0 0
+aux 2 28 1 1825 2100 0 0
+aux 3 35 3 1750 2100 0 0
+
+# vtxtable
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B CUSTOM  5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E CUSTOM  5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 FATSHARK F CUSTOM  5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable powerlevels 4
+vtxtable powervalues 25 100 200 400
+vtxtable powerlabels 25 100 200 400
+
+# master
+set acc_calibration = 62,86,-74,1
+set fpv_mix_degrees = 30
+set serialrx_provider = CRSF
+set min_throttle = 1069
+set small_angle = 180
+set osd_warn_batt_not_full = OFF
+set osd_warn_core_temp = OFF
+set osd_warn_launch_control = OFF
+set osd_warn_no_gps_rescue = OFF
+set osd_warn_gps_rescue_disabled = OFF
+set osd_tim2 = 1282
+set osd_link_quality_pos = 2146
+set osd_tim_1_pos = 2114
+set osd_flymode_pos = 2134
+set osd_vtx_channel_pos = 2082
+set osd_craft_name_pos = 2166
+set osd_warnings_pos = 14634
+set osd_avg_cell_voltage_pos = 2102
+set osd_stat_min_link_quality = ON
+set osd_stat_total_time = ON
+set vtx_band = 5
+set vtx_channel = 1
+set vtx_power = 4
+set vtx_low_power_disarm = ON
+set vtx_freq = 5658
+set name = mk01
+
+profile 0
+
+# profile 0
+set p_pitch = 34
+set i_pitch = 55
+set d_pitch = 19
+set p_roll = 32
+set i_roll = 50
+set d_roll = 19
+set p_yaw = 46
+set i_yaw = 51
+set d_min_roll = 0
+set d_min_pitch = 0
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
